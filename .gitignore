@@ -1,0 +1,10 @@
+
+out
+bin
+dev
+obj
+.pycache
+__pycache__
+site-packages
+
+
