@@ -115,6 +115,14 @@ def ensure_vm_created_from_material():
 
 
 def boot_vm():
+
+  for i in range(1, 5):
+    swapfile = f'/mnt/scratch/swap-files/swap-{i}'
+    if os.path.exists(swapfile):
+      subprocess.run([
+        'sudo', 'swapon', swapfile
+      ], check=False)
+
   vm_qcow2_image = f'{VM_DATA_DIR}/WinDev2401Eval.qcow2'
   shared_folder = os.path.abspath('.')
   print()
@@ -134,7 +142,8 @@ def boot_vm():
       '-cpu', 'host',
       '-smp', '2',
       '-machine', 'type=pc,accel=kvm,kernel_irqchip=on',
-      '-nic', f'user,id=winnet0,id=mynet0,net=192.168.90.0/24,dhcpstart=192.168.90.10,hostfwd=tcp::3389-:3389,hostfwd=udp::3389-:3389,smb={shared_folder}',
+      #'-nic', f'user,id=winnet0,id=mynet0,net=192.168.90.0/24,dhcpstart=192.168.90.10,hostfwd=tcp::3389-:3389,hostfwd=udp::3389-:3389,smb={shared_folder}',
+      '-nic', f'user,id=winnet0,id=mynet0,net=192.168.90.0/24,dhcpstart=192.168.90.10,hostfwd=tcp::3389-:3389,hostfwd=udp::3389-:3389',
       '-net', 'nic,model=virtio',
       '-boot', 'c',
 
