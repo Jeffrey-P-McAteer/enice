@@ -127,7 +127,8 @@ def boot_vm():
   shared_folder = os.path.abspath('.')
   print()
   print(f'shared_folder = {shared_folder}')
-  print(r'Access as \\10.0.2.4\qemu within VM')
+  #print(r'Access as \\10.0.2.4\qemu within VM')
+  print('Release mouse with ctrl+alt+g')
   print()
 
   cmd = [
