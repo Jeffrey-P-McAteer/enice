@@ -102,7 +102,7 @@ def ensure_vm_created_from_material():
       all_vmdk_files.append(vmdk_f)
     print(f'Creating {vm_qcow2_image} from {all_vmdk_files}')
     subprocess.run([
-      'qemu-img', 'convert', '-f', 'vmdk', *all_vmdk_files, vm_qcow2_image
+      'qemu-img', 'convert', '-f', 'vmdk', '-O', 'qcow2', *all_vmdk_files, vm_qcow2_image
     ])
     # and finally ensure we allocate about 140 GB for the drive; will need to expand from within the guest as well!
     subprocess.run([
