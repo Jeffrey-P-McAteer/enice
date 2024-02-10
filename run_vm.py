@@ -121,11 +121,12 @@ def boot_vm():
   print(f'shared_folder = {shared_folder}')
   print(r'Access as \\10.0.2.4\qemu within VM')
   print()
-  subprocess.run([
+
+  cmd = [
     'systemd-run',
       '--scope', '-p', 'MemoryHigh=8G', '-p', 'MemorySwapMax=999G', '--user',
 
-    'qemu',
+    'qemu-system-x86_64',
       '-bios', '/usr/share/edk2-ovmf/x64/OVMF_CODE.fd',
       '-drive', f'format=qcow2,file={vm_qcow2_image}',
       '-enable-kvm',
@@ -139,7 +140,13 @@ def boot_vm():
 
       '-vga', 'virtio',
       '-display', 'gtk,gl=on',
-  ])
+  ]
+
+  print()
+  print(f'>>> {" ".join(cmd)}')
+  print()
+
+  subprocess.run(cmd)
 
 def main():
   ensure_vm_material_downloaded()
