@@ -150,6 +150,7 @@ def boot_vm():
 
       '-vga', 'virtio',
       '-display', 'gtk,gl=on,show-cursor=on',
+      '-usb', '-device', 'usb-kbd', '-device', 'usb-tablet',
   ]
 
   mytpm = '/tmp/mytpm1'
