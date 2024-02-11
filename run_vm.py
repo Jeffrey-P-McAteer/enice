@@ -149,7 +149,7 @@ def boot_vm():
       '-boot', 'c',
 
       '-vga', 'virtio',
-      '-display', 'gtk,gl=on',
+      '-display', 'gtk,gl=on,show-cursor=on',
   ]
 
   mytpm = '/tmp/mytpm1'
