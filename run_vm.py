@@ -133,13 +133,13 @@ def boot_vm():
 
   cmd = [
     'systemd-run',
-      '--scope', '-p', 'MemoryHigh=8G', '-p', 'MemorySwapMax=999G', '--user',
+      '--scope', '-p', 'MemoryHigh=10G', '-p', 'MemorySwapMax=999G', '--user',
 
     'qemu-system-x86_64',
       '-bios', '/usr/share/edk2-ovmf/x64/OVMF_CODE.fd',
       '-drive', f'format=qcow2,file={vm_qcow2_image}',
       '-enable-kvm',
-      '-m', '24000M',
+      '-m', '16000M',
       '-cpu', 'host',
       '-smp', '2',
       '-machine', 'type=pc,accel=kvm,kernel_irqchip=on',
