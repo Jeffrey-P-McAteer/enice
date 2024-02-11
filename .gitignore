@@ -6,5 +6,7 @@ obj
 .pycache
 __pycache__
 site-packages
-
+target
+target/
+pyenv
 
