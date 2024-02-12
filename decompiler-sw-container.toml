@@ -6,6 +6,8 @@ welcome_msg = '''
 Run
   > su user
   > cd /enice # mapped to this directory
+  > /opt/ghidra_11.0.1_PUBLIC_20240130/ghidra_11.0.1_PUBLIC/ghidraRun
+  >
 '''
 
 #runtime_hint = "arch-chroot"
