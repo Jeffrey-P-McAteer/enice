@@ -36,4 +36,8 @@ or that GIS data matches any spatial references used. WGS84 is assumed everywher
  - https://github.com/Esri/file-geodatabase-api/
  - https://demangler.com/
  - https://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//006z000000tr000000.htm
+ - http://www.backerstreet.com/decompiler/decompilers.htm
+ - https://github.com/NationalSecurityAgency/ghidra
+
+
 
