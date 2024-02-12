@@ -6,7 +6,7 @@ welcome_msg = '''
 Run
   > su user
   > cd /enice # mapped to this directory
-  > /opt/ghidra_11.0.1_PUBLIC_20240130/ghidra_11.0.1_PUBLIC/ghidraRun
+  > _JAVA_AWT_WM_NONREPARENTING=1 /opt/ghidra_11.0.1_PUBLIC_20240130/ghidra_11.0.1_PUBLIC/ghidraRun
   >
 '''
 
@@ -79,7 +79,7 @@ nspawn_addtl_args = [
   "--bind=/dev/dri",
   "--bind=/dev/snd",
   "--bind=/tmp",
-  "--bind=/j/projects/enice:/enice",
+  "--bind=/j/proj/enice:/enice",
   "--user=user", # exec as 'user' user we setup before, we expect it's ID to match our GUI user's ID (1000)
   "--"
 ]
