@@ -35,4 +35,5 @@ or that GIS data matches any spatial references used. WGS84 is assumed everywher
  - https://appsforms.esri.com/products/download/index.cfm?fuseaction=#File_Geodatabase_API_1.4
  - https://github.com/Esri/file-geodatabase-api/
  - https://demangler.com/
+ - https://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//006z000000tr000000.htm
 
