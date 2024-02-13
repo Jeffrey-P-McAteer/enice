@@ -1,0 +1,17 @@
+[package]
+name = "gdal-tests"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+# Requires "yay -S gdal" on Arch Linux to find "cpl_atomic_ops.h" include header
+[dependencies.gdal]
+version = "0.16"
+features = [ "bindgen" ]
+
+
+
